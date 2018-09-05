@@ -331,9 +331,14 @@
                                                             
                         @foreach($MainMenuLink->webmasterSection->topics->where('status',1)->sortbyDesc('date') as $topicId)
                         
+                           
                             <?php
 
                                 $tin = $topicId;
+
+                                $i = 0;
+
+
 
                                 $section = "";
                                 try {
