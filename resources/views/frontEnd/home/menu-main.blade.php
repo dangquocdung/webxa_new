@@ -327,6 +327,8 @@
                 @else
 
                     <div class="col-md-12" style="float:left">
+
+                        @php $i=0; @endphp
                                                             
                                                             
                         @foreach($MainMenuLink->webmasterSection->topics->where('status',1)->sortbyDesc('date') as $topicId)
@@ -335,10 +337,6 @@
                             <?php
 
                                 $tin = $topicId;
-
-                                $i = 0;
-
-
 
                                 $section = "";
                                 try {
@@ -390,7 +388,7 @@
                                             </div>
 
                                             <div class="tin_title_abstract" style="display:;">
-                                                <p>{{ str_limit(strip_tags($tin->$details_var), $limit = 350, $end = '...') }}</p>
+                                                <p>{{ $tin->$summary_var}}</p>
                                             </div>
                                         </div>
 

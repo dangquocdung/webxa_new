@@ -13,6 +13,7 @@ $urlAfterRoot = substr($fullPagePath, strpos($fullPagePath, env('BACKEND_PATH'))
 ?>
 <?php
     $link_title_var = "title_" . trans('backLang.boxCode');
+    $summary_var = "summary_" . trans('backLang.boxCode');
     $details_var = "details_" . trans('backLang.boxCode');
     $details_var2 = "details_" . trans('backLang.boxCodeOther');
     $title_var = "title_" . trans('backLang.boxCode');
