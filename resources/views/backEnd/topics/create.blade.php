@@ -158,7 +158,7 @@
 
                         <div class="col-sm-10">
                             <div class="box p-a-xs">
-                                {!! Form::textarea('summary_vi','<div dir=ltr><br></div>', array('placeholder' => '','class' => 'form-control', 'dir'=>trans('backLang.ltr'),'row'=>'3')) !!}
+                                {!! Form::textarea('summary_vi', array('placeholder' => '','class' => 'form-control', 'dir'=>trans('backLang.ltr'),'row'=>'3')) !!}
                             </div>
                         </div>
                         
