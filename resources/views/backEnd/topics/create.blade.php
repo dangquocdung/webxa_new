@@ -152,13 +152,13 @@
 
                     <div class="form-group row">
                         <label for="summary_vi"
-                               class="col-sm-2 form-control-label">{!!  trans('backLang.bannerTitle') !!}
+                               class="col-sm-2 form-control-label">{!!  trans('backLang.sumTopic') !!}
                             @if(Helper::GeneralWebmasterSettings("vi_box_status") && Helper::GeneralWebmasterSettings("en_box_status")){!!  trans('backLang.arabicBox') !!}@endif
                         </label>
 
                         <div class="col-sm-10">
                             <div class="box p-a-xs">
-                                {!! Form::textarea('summary_vi','<div dir=ltr><br></div>', array('ui-jp'=>'summernote','placeholder' => '','class' => 'form-control', 'dir'=>trans('backLang.ltr'),'ui-options'=>'{height: 300}')) !!}
+                                {!! Form::textarea('summary_vi','<div dir=ltr><br></div>', array('placeholder' => '','class' => 'form-control', 'dir'=>trans('backLang.ltr'),'row'=>'3')) !!}
                             </div>
                         </div>
                         
