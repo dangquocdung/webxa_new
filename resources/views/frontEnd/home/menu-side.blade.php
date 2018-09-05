@@ -22,7 +22,7 @@
         </div>
 
         <div id="ban-do-dia-gioi" class="panel-collapse collapse in">
-            <a href="http://gis.chinhphu.vn/?r=ytZEOqw8fEiSQeRsfea4w" target="_blank">
+            <a href="http://gis.chinhphu.vn/?r=d8urwW36Eim5fYUZebkjQ" target="_blank">
 
                 <img src="/images/ban-do.jpg" alt="Bản đồ Hà Tĩnh" title="Bản đồ Hà Tĩnh" width="100%">
             </a>
