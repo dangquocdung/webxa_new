@@ -683,7 +683,7 @@ ul.cat li .active {
 }
 
 body {
-  background: #FFFFFF url(/images/body_bg.gif) repeat left top !important;
+  background: #FFFFFF url(/images/background.png) repeat left top !important;
   color: #000000;
   font-family: 'SF Display',sans-serif !important;
   letter-spacing: -0.01em;
@@ -3031,4 +3031,3 @@ form#commentform textarea {
   margin-bottom: 2px;
   text-transform: uppercase;
 }
-
