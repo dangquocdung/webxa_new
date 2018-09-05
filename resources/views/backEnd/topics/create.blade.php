@@ -155,11 +155,15 @@
                                class="col-sm-2 form-control-label">{!!  trans('backLang.bannerTitle') !!}
                             @if(Helper::GeneralWebmasterSettings("vi_box_status") && Helper::GeneralWebmasterSettings("en_box_status")){!!  trans('backLang.arabicBox') !!}@endif
                         </label>
+
                         <div class="col-sm-10">
-                            {!! Form::textarea('summary_vi','', array('placeholder' => 'Tóm tắt nội dung','class' => 'form-control','id'=>'title_vi','required'=>'', 'dir'=>trans('backLang.rtl'), ,'rows'=>'3')) !!}
+                            <div class="box p-a-xs">
+                                {!! Form::textarea('summary_vi','<div dir=ltr><br></div>', array('ui-jp'=>'summernote','placeholder' => '','class' => 'form-control', 'dir'=>trans('backLang.ltr'),'ui-options'=>'{height: 300}')) !!}
+                            </div>
                         </div>
+                        
                     </div>
-                    
+
                 @endif
                 @if(Helper::GeneralWebmasterSettings("en_box_status"))
                     <div class="form-group row">
