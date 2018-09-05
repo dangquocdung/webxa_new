@@ -69,11 +69,6 @@
 </div>
 @endif
 
-{{--  <a class="dichvucong" href="#">
-    <a href="https://www.accuweather.com/vi/vn/ha-tinh/353418/weather-forecast/353418" class="aw-widget-legal"></a>
-    <div id="awcc1491117457730" class="aw-widget-current"  data-locationkey="353418" data-unit="c" data-language="vi" data-useip="false" data-uid="awcc1491117457730"></div>
-    <script type="text/javascript" src="https://oap.accuweather.com/launch.js"></script>
-</a>  --}}
 
 <div class="block4" style="border-radius: 5px">
 
@@ -99,21 +94,6 @@
     </div>
 
 </div>
-
-
-
-<div id="fb-root"></div>
-<script>
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.0&appId=1857385837639663&autoLogAppEvents=1';
-        fjs.parentNode.insertBefore(js, fjs);
-        }
-        (document, 'script', 'facebook-jssdk')
-    );
-</script>
 
 <div class="block4">
 
