@@ -36,14 +36,7 @@ if (Helper::GeneralSiteSettings("style_type")) {
     <!-- Content Section -->
     
     <div class="container nen-trang">
-        @if (empty($search_word))
-            @if (!empty($WebmasterSection) && $WebmasterSection->id==20)
-            
-                    @include('frontEnd.includes.doi-thoai')
-            
-            @endif
-        @endif
-       
+        
         <div class="row row-offcanvas row-offcanvas-right">
 
             <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 main-page" style="min-height: 1550px;">
