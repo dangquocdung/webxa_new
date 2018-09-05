@@ -179,6 +179,9 @@ class TopicsController extends Controller
             $Topic->title_vi = $request->title_vi;
             $Topic->title_en = $request->title_en;
 
+            $Topic->summary_vi = $request->summary_vi;
+            $Topic->summary_en = $request->summary_en;
+
             $Topic->details_vi = $request->details_vi;
             $Topic->details_en = $request->details_en;
             $Topic->date = Carbon::parse($request->date)->format('Y-m-d');
@@ -417,6 +420,9 @@ class TopicsController extends Controller
 
                 $Topic->title_vi = $request->title_vi;
                 $Topic->title_en = $request->title_en;
+                $Topic->summary_vi = $request->summary_vi;
+                $Topic->summary_en = $request->summary_en;
+                
                 $Topic->details_vi = $request->details_vi;
                 $Topic->details_en = $request->details_en;
                 $Topic->date = Carbon::parse($request->date)->format('Y-m-d');
