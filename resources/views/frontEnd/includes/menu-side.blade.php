@@ -95,28 +95,6 @@
 
 </div>
 
-<div class="block4">
-
-    <div class="fb-page" data-href="https://www.facebook.com/dulichbienhatinh/" 
-        >
-        <blockquote cite="https://www.facebook.com/dulichbienhatinh/" class="fb-xfbml-parse-ignore">
-            <a href="https://www.facebook.com/dulichbienhatinh/">Du Lịch Biển Hà Tĩnh</a>
-        </blockquote>
-    </div>
-</div>
-
-
-    
-
-    
-
-
-
-
-
-
-
-
 @if (!empty($SideBanners))
     
 
