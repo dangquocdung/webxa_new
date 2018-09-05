@@ -106,6 +106,11 @@
                                 {!! Form::text('ban_do',$Setting->ban_do, array('placeholder' => 'http://gis.chinhphu.vn/?r=GrmBztujD0mj5q4Z0JWWNg','class' => 'form-control', 'dir'=>trans('backLang.ltr'))) !!}
                             </div>
                             <br>
+                            <div class="form-group">
+                                <label>{!!  trans('backLang.footer') !!}</label>
+                                {!! Form::textarea('site_footer',$Setting->site_footer, array('ui-jp'=>'summernote','placeholder' => '','class' => 'form-control summernote', 'dir'=>trans('backLang.rtl'),'ui-options'=>'{height: 300}')) !!}
+                            </div>
+                            <br>
                             <h6>{!!  trans('backLang.emailNotifications') !!}</h6>
                             <hr>
                             <div class="form-group">
