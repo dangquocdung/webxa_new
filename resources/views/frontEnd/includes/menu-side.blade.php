@@ -28,32 +28,25 @@
 
 
 
-<div class="block4" style="border-radius: 5px">
 
-    <div id="block-header-bd" class="block-header" style="margin-bottom: 0" data-toggle="collapse" href="#thoi-tiet-ha-tinh">
-
-        <h4>
-            <img src="/images/background/lotus.ico" alt="" width="26px"> Thời tiết Hà Tĩnh
-        </h4>
-
-    </div>
-
-    <div class="clearfix"></div>
-
-    <div id="thoi-tiet-ha-tinh" class="panel-collapse collapse in">
-        <a href="http://www.nchmf.gov.vn/web/vi-VN/62/20/28/map/Default.aspx" target="_blank">
-            <div style="padding: 5px 15px">
-
-                <div id="thoi-tiet" class="thoi-tiet"></div>
-            </div>
-
-            
-        </a>
-    </div>
-
-</div>
 
 @if (!empty($SideBanners))
+
+    <div class="block4">
+
+            <div class="block-header" style="margin-bottom: 0">
+                <h4><img src="/images/background/lotus.ico" alt="" width="26px"> {!! trans('frontLang.partners') !!}</h4>
+            </div>
+
+            @foreach ($SideBanners->where('status',1)->where('type_id',3) as $SideBanner)
+                <div class="box-banner">
+                    <a href="{!! $SideBanner->link_url !!}" target="_blank">
+                        <img src="/uploads/banners/{!! $SideBanner->$file_var !!}" alt="{!! $SideBanner->$title_var !!}" title="{!! $SideBanner->$title_var !!}" width="100%">
+                    </a>
+                </div>
+            @endforeach
+            
+        </div>
     
 
     <div class="block4">
@@ -112,6 +105,52 @@
     @endif
 
 @endif
+
+<div class="block4">
+
+    <div id="block-header-bd" class="block-header" style="margin-bottom: 0" data-toggle="collapse" href="#ban-do-dia-gioi">
+
+        <h4>
+            <img src="/images/background/lotus.ico" alt="" width="26px"> {!! trans('frontLang.map') !!}
+
+            <i id="menu-bd" class="fa fa-chevron-down" style="position: absolute; top: 5px; right:12px;left: auto"></i>
+        </h4>
+
+    </div>
+
+    <div id="ban-do-dia-gioi" class="panel-collapse collapse in">
+        <a href="http://gis.chinhphu.vn/?r=d8urwW36Eim5fYUZebkjQ" target="_blank">
+
+            <img src="/images/ban-do.jpg" alt="Bản đồ Hà Tĩnh" title="Bản đồ Hà Tĩnh" width="100%">
+        </a>
+    </div>
+
+</div>
+
+<div class="block4" style="border-radius: 5px">
+
+    <div id="block-header-bd" class="block-header" style="margin-bottom: 0" data-toggle="collapse" href="#thoi-tiet-ha-tinh">
+
+        <h4>
+            <img src="/images/background/lotus.ico" alt="" width="26px"> Thời tiết Hà Tĩnh
+        </h4>
+
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div id="thoi-tiet-ha-tinh" class="panel-collapse collapse in">
+        <a href="http://www.nchmf.gov.vn/web/vi-VN/62/20/28/map/Default.aspx" target="_blank">
+            <div style="padding: 5px 15px">
+
+                <div id="thoi-tiet" class="thoi-tiet"></div>
+            </div>
+
+            
+        </a>
+    </div>
+
+</div>
 
 
 
@@ -200,55 +239,7 @@
 @endif
 
 
-{{--  <div class="clearfix"></div>
-<iframe frameborder="0" src="//www.tygia.com/api.php?column=1&amp;title=0&amp;chart=0&amp;gold=1&amp;rate=0&amp;expand=0&amp;color=B4D0D0&amp;titlecolor=333333&amp;nganhang=VIETCOM&amp;fontsize=80&amp;change=0&amp;css=%23SJC_N_ng{display:%20table-row%20!important;}" style="border: none;" width="100%" height="100%"></iframe>
 
-<div class="clearfix"></div>
-<iframe frameborder="0" src="//www.tygia.com/api.php?column=1&amp;title=0&amp;chart=0&amp;gold=0&amp;rate=1&amp;ngoaite=usd,jpy,chf,eur,gbp,aud&amp;expand=0&amp;color=B4D0D0&amp;titlecolor=333333&amp;bgcolor=ffffff&amp;upcolor=00aa00&amp;downcolor=bb0000&amp;textcolor=333333&amp;nganhang=VIETCOM&amp;fontsize=80&amp;ngay=" style="border: none;" width="100%" height="100%"></iframe>  --}}
-        
-   
-
-
-{{--  <div class="card">
-      
-    <ul class="nav nav-tabs" role="tablist" style="border-bottom: none">
-
-        <li class="active">
-            
-            <a href="#ty-gia" data-toggle="tab">
-                
-                <span class="hidden-xs">
-                    Tỉ giá ngoại tệ
-                </span>
-                
-            </a>
-        </li>
-        <li>
-            
-            <a href="#gia-vang" data-toggle="tab">
-                
-                <span class="hidden-xs">
-                    Giá vàng
-                </span>
-                
-            </a>
-        </li>
-            
-    </ul>
-
-    <div class="tab-content">
-        
-        <div class="to-chuc tab-pane active" id="ty-gia">
-            ty-gia
-        </div>
-
-        <div class="to-chuc tab-pane" id="gia-vang">
-            gia-vang
-        </div>
-
-    </div>
-
-</div>  --}}
 
 
 <script src="{{ URL::asset('frontEnd/js/hypersonic-weather.js') }}"></script>
