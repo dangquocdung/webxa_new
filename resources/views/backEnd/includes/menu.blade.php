@@ -487,7 +487,7 @@ $urlAfterRoot = substr($fullPagePath, strpos($fullPagePath, env('BACKEND_PATH'))
                                     strlen($currentSubFolder));
                                 ?>
                                 <li {{ ($PathCurrentSubFolder==$currentSubFolder) ? 'class=active' : '' }}>
-                                    <a href="{{ url('/'.env('BACKEND_PATH', 'admin').'/webmaster/translations') }}" target="_blank">
+                                    <a target="_blank" href="{{ url('/'.env('BACKEND_PATH', 'admin').'/webmaster/translations') }}" >
                                         <span class="nav-text">
                                             {{ trans('backLang.translations') }}
                                         </span>
