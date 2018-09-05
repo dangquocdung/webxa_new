@@ -66,6 +66,15 @@
                             {!! Form::text('title_vi','', array('placeholder' => '','class' => 'form-control','id'=>'title_vi','required'=>'', 'dir'=>trans('backLang.rtl'))) !!}
                         </div>
                     </div>
+                    <div class="form-group row">
+                        <label for="summary_vi"
+                               class="col-sm-2 form-control-label">{!!  trans('backLang.bannerTitle') !!}
+                            @if(Helper::GeneralWebmasterSettings("vi_box_status") && Helper::GeneralWebmasterSettings("en_box_status")){!!  trans('backLang.arabicBox') !!}@endif
+                        </label>
+                        <div class="col-sm-10">
+                            {!! Form::textarea('summary_vi','', array('placeholder' => 'Tóm tắt nội dung','class' => 'form-control','id'=>'title_vi','required'=>'', 'dir'=>trans('backLang.rtl'), ,'rows'=>'3')) !!}
+                        </div>
+                    </div>
                 @endif
                 @if(Helper::GeneralWebmasterSettings("en_box_status"))
                     <div class="form-group row">
