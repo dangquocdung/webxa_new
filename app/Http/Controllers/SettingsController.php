@@ -79,6 +79,7 @@ class SettingsController extends Controller
             $Setting->notify_comments_status = $request->notify_comments_status;
             $Setting->notify_orders_status = $request->notify_orders_status;
             $Setting->site_url = $request->site_url;
+            $Setting->ban_do = $request->ban_do;
             $Setting->updated_by = Auth::user()->id;
             $Setting->save();
             return redirect()->action('SettingsController@edit')

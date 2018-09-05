@@ -101,6 +101,11 @@
                                 {!! Form::text('site_url',$Setting->site_url, array('placeholder' => 'http//:www.sitename.com/','class' => 'form-control', 'dir'=>trans('backLang.ltr'))) !!}
                             </div>
                             <br>
+                            <div class="form-group">
+                                <label>{!!  trans('backLang.bando') !!}</label>
+                                {!! Form::text('ban_do',$Setting->ban_do, array('placeholder' => 'http://gis.chinhphu.vn/?r=GrmBztujD0mj5q4Z0JWWNg','class' => 'form-control', 'dir'=>trans('backLang.ltr'))) !!}
+                            </div>
+                            <br>
                             <h6>{!!  trans('backLang.emailNotifications') !!}</h6>
                             <hr>
                             <div class="form-group">
