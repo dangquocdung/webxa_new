@@ -1,4 +1,4 @@
-@extends('FRONTEND.layout1')
+@extends('backEnd.layout1')
 
 @section('content')
 
@@ -657,7 +657,7 @@
                 }else{
                     $(document).ready(function(){
                         $.ajax({
-                        url: '{{ URL::to(env('FRONTEND_PATH')."/calendar/") }}/' + event.id + '/extend',
+                        url: '{{ URL::to("/lich-cong-tac/") }}/' + event.id + '/extend',
                         type: 'post',
                         data: {'started_on': event.start.format(),'ended_on':event.end.format(),'_token':'{{ csrf_token() }}'},
                         success: function(data){
@@ -673,7 +673,7 @@
                 }else{
                      $(document).ready(function(){
                         $.ajax({
-                        url: '{{ URL::to(env('FRONTEND_PATH')."/calendar/") }}/' + event.id + '/extend',
+                        url: '{{ URL::to("/lich-cong-tac/") }}/' + event.id + '/extend',
                         type: 'post',
                         data: {'started_on': event.start.format(),'_token':'{{ csrf_token() }}'},
                         success: function(data){
