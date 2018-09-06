@@ -25,11 +25,14 @@
 
 @if (!empty($SideBanners))
     
+    @if ($SideBanners->where('type_id',1)->count() > 0)
 
     <div class="block4">
 
         <div class="block-header" style="margin-bottom: 0">
+
             <h4><img src="/images/background/lotus.ico" alt="" width="26px"> Liên kết phần mềm</h4>
+
         </div>
 
         @foreach ($SideBanners->where('type_id',1) as $SideBanner)
@@ -39,8 +42,11 @@
                 </a>
             </div>
         @endforeach
-        
+
     </div>
+    @endif
+
+    @if ($SideBanners->where('type_id',2)->count() > 0)
 
     <div class="block4">
 
@@ -59,6 +65,7 @@
         @endforeach
 
     </div>
+    @endif
 
     @if ($SideBanners->where('type_id',3)->count() > 0)
 
@@ -70,7 +77,7 @@
 
         </div>
 
-        @foreach ($SideBanners->where('type_id',1) as $SideBanner)
+        @foreach ($SideBanners->where('type_id',3) as $SideBanner)
             <div class="box-banner">
                 <a href="{!! $SideBanner->link_url !!}" target="_blank">
                     <img src="/uploads/banners/{!! $SideBanner->$file_var !!}" alt="{!! $SideBanner->$title_var !!}" title="{!! $SideBanner->$title_var !!}" width="100%">
