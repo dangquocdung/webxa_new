@@ -369,7 +369,8 @@ Route::get('/page/{id}', 'FrontendHomeController@PageView');
 Route::get('/{lang?}/page/{id}', 'FrontendHomeController@PageViewByLang');
 
 // ..Calendar
-Route::get('/lich-cong-tac', 'FrontendHomeController@CalendarPage')->name('calendarPage');
+Route::get('/lich-cong-tac', 'FrontendHomeController@LichCongTacPage')->name('lichcongtacPage');
+Route::get('/lich-cong-tac/{id}/edit', 'FrontendHomeController@eLichCongTacEdit')->name('lichcongtacEdit');
 
 // Route::post('/{lang?}/section/{id}', 'FrontendHomeController@StoreCommentsByLang')->name('StoreCommentsByLang');
 
