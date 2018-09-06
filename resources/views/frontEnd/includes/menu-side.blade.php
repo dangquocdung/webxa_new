@@ -43,6 +43,46 @@
     
 @endif
 
+@if (!empty($SideBanners2))
+
+    <div class="block4">
+
+        <div class="block-header" style="margin-bottom: 0">
+            <h4><img src="/images/background/lotus.ico" alt="" width="26px"> Liên kết website </h4>
+        </div>
+
+        @foreach ($SideBanners2 as $SideBanner)
+            <div class="box-banner">
+                <a href="{!! $SideBanner->link_url !!}" target="_blank">
+                    <img src="/uploads/banners/{!! $SideBanner->$file_var !!}" alt="{!! $SideBanner->$title_var !!}" title="{!! $SideBanner->$title_var !!}" width="100%">
+                </a>
+            </div>
+        @endforeach
+        
+    </div>
+    
+@endif
+
+@if (!empty($SideBanners3))
+
+    <div class="block4">
+
+        <div class="block-header" style="margin-bottom: 0">
+            <h4><img src="/images/background/lotus.ico" alt="" width="26px"> Liên kết doanh nghiệp </h4>
+        </div>
+
+        @foreach ($SideBanners3 as $SideBanner)
+            <div class="box-banner">
+                <a href="{!! $SideBanner->link_url !!}" target="_blank">
+                    <img src="/uploads/banners/{!! $SideBanner->$file_var !!}" alt="{!! $SideBanner->$title_var !!}" title="{!! $SideBanner->$title_var !!}" width="100%">
+                </a>
+            </div>
+        @endforeach
+        
+    </div>
+    
+@endif
+
 <div class="block4">
 
     <div id="block-header-bd" class="block-header" style="margin-bottom: 0" data-toggle="collapse" href="#ban-do-dia-gioi">
