@@ -95,8 +95,6 @@ class WebmasterSettingsController extends Controller
             $WebmasterSetting->home_banners_section_id = $request->home_banners_section_id;
             $WebmasterSetting->home_text_banners_section_id = $request->home_text_banners_section_id;
             $WebmasterSetting->side_banners_section_id = $request->side_banners_section_id;
-            $WebmasterSetting->side_banners_section_id_2 = $request->side_banners_section_id_2;
-            $WebmasterSetting->side_banners_section_id_3 = $request->side_banners_section_id_3;
             $WebmasterSetting->contact_page_id = $request->contact_page_id;
             $WebmasterSetting->newsletter_contacts_group = $request->newsletter_contacts_group;
             $WebmasterSetting->new_comments_status = $request->new_comments_status;

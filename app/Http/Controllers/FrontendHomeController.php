@@ -98,12 +98,6 @@ class FrontendHomeController extends Controller
         //Side Banner
         $SideBanners = Banner::where('section_id', $WebmasterSettings->side_banners_section_id)->where('status',1)->orderby('row_no', 'asc')->get();
         
-        //Side Banner 2
-        $SideBanners2 = Banner::where('section_id', $WebmasterSettings->side_banners_section_id_2)->where('status',1)->orderby('row_no', 'asc')->get();
-
-          //Side Banner 3
-        $SideBanners3 = Banner::where('section_id', $WebmasterSettings->side_banners_section_id_3)->where('status',1)->orderby('row_no', 'asc')->get();
-
 
         $Visitors = AnalyticsVisitor::count();
         $Pages = AnalyticsPage::count();
@@ -119,8 +113,6 @@ class FrontendHomeController extends Controller
         view()->share('MarqueeTopics',$MarqueeTopics);
         view()->share('TopBanners',$TopBanners);
         view()->share('SideBanners',$SideBanners);
-        view()->share('SideBanners2',$SideBanners2);
-        view()->share('SideBanners3',$SideBanners3);
         view()->share('Visitors',$Visitors);
         view()->share('Pages',$Pages);
         view()->share('TodayVisitors',$TodayVisitors);

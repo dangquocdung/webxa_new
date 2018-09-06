@@ -268,28 +268,6 @@
                     @endforeach
                 </select>
             </div>
-            <div class="form-group">
-                <label>{{ trans('backLang.sideBanners') }} : </label>
-                <select name="side_banners_section_id_2" id="side_banners_section_id" class="form-control c-select">
-                    <option value="0">- - {!!  trans('backLang.none') !!} - -</option>
-                    @foreach ($WebmasterBanners as $WebmasterBanner)
-                        <?php
-                        ?>
-                        <option value="{{ $WebmasterBanner->id  }}" {{ ($WebmasterBanner->id == $WebmasterSetting->side_banners_section_id_2) ? "selected='selected'":""  }}>{!! trans('backLang.'.$WebmasterBanner->name)   !!}</option>
-                    @endforeach
-                </select>
-            </div>
-            <div class="form-group">
-                <label>{{ trans('backLang.sideBanners') }} : </label>
-                <select name="side_banners_section_id_3" id="side_banners_section_id" class="form-control c-select">
-                    <option value="0">- - {!!  trans('backLang.none') !!} - -</option>
-                    @foreach ($WebmasterBanners as $WebmasterBanner)
-                        <?php
-                        ?>
-                        <option value="{{ $WebmasterBanner->id  }}" {{ ($WebmasterBanner->id == $WebmasterSetting->side_banners_section_id_3) ? "selected='selected'":""  }}>{!! trans('backLang.'.$WebmasterBanner->name)   !!}</option>
-                    @endforeach
-                </select>
-            </div>
 
             
 

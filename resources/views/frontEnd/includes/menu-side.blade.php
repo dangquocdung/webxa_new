@@ -24,14 +24,15 @@
 
 
 @if (!empty($SideBanners))
+    
 
     <div class="block4">
 
         <div class="block-header" style="margin-bottom: 0">
-            <h4><img src="/images/background/lotus.ico" alt="" width="26px"> Liên kết phần mềm </h4>
+            <h4><img src="/images/background/lotus.ico" alt="" width="26px"> {!! trans('frontLang.partners') !!}</h4>
         </div>
 
-        @foreach ($SideBanners as $SideBanner)
+        @foreach ($SideBanners->where('type_id',3) as $SideBanner)
             <div class="box-banner">
                 <a href="{!! $SideBanner->link_url !!}" target="_blank">
                     <img src="/uploads/banners/{!! $SideBanner->$file_var !!}" alt="{!! $SideBanner->$title_var !!}" title="{!! $SideBanner->$title_var !!}" width="100%">
@@ -40,47 +41,46 @@
         @endforeach
         
     </div>
-    
-@endif
-
-@if (!empty($SideBanners2))
 
     <div class="block4">
 
         <div class="block-header" style="margin-bottom: 0">
-            <h4><img src="/images/background/lotus.ico" alt="" width="26px"> Liên kết website </h4>
+
+            <h4><img src="/images/background/lotus.ico" alt="" width="26px"> {!! trans('frontLang.events') !!}</h4>
+
         </div>
 
-        @foreach ($SideBanners2 as $SideBanner)
+        @foreach ($SideBanners->where('type_id',2) as $SideBanner)
             <div class="box-banner">
                 <a href="{!! $SideBanner->link_url !!}" target="_blank">
                     <img src="/uploads/banners/{!! $SideBanner->$file_var !!}" alt="{!! $SideBanner->$title_var !!}" title="{!! $SideBanner->$title_var !!}" width="100%">
                 </a>
             </div>
         @endforeach
-        
-    </div>
-    
-@endif
 
-@if (!empty($SideBanners3))
+    </div>
+
+    @if ($SideBanners->where('type_id',1)->count() > 0)
 
     <div class="block4">
 
         <div class="block-header" style="margin-bottom: 0">
-            <h4><img src="/images/background/lotus.ico" alt="" width="26px"> Liên kết doanh nghiệp </h4>
+
+            <h4><img src="/images/background/lotus.ico" alt="" width="26px"> {!! trans('frontLang.sponsers') !!}</h4>
+
         </div>
 
-        @foreach ($SideBanners3 as $SideBanner)
+        @foreach ($SideBanners->where('type_id',1) as $SideBanner)
             <div class="box-banner">
                 <a href="{!! $SideBanner->link_url !!}" target="_blank">
                     <img src="/uploads/banners/{!! $SideBanner->$file_var !!}" alt="{!! $SideBanner->$title_var !!}" title="{!! $SideBanner->$title_var !!}" width="100%">
                 </a>
             </div>
         @endforeach
-        
+
     </div>
-    
+    @endif
+
 @endif
 
 <div class="block4">
