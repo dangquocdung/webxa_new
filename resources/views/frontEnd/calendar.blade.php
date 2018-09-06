@@ -12,7 +12,7 @@
                     <ul class="breadcrumb">
                         <li><a href="{{ route('Home') }}"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i>
                         </li>
-                        <li class="active">{{ $title }}</li>
+                        <li class="active">Lịch công tác</li>
                     </ul>
 
             </div>
