@@ -590,11 +590,11 @@
 
 
 
-                    
+
                 </div>
                 <div class="col-sm-8 text-sm-right">
                     <div class="btn-group m-l-xs">
-                        <button class="btn btn-sm white" id="todayview">{{ trans('backLang.eventToday') }}</button>
+                        {{-- <button class="btn btn-sm white" id="todayview">{{ trans('backLang.eventToday') }}</button> --}}
                         <button class="btn btn-sm white" id="dayview">{{ trans('backLang.eventDay') }}</button>
                         <button class="btn btn-sm white" id="weekview">{{ trans('backLang.eventWeek') }}</button>
                         <button class="btn btn-sm white" id="monthview">{{ trans('backLang.eventMonth') }}</button>
@@ -688,10 +688,7 @@
             </div>
             <br>
             <small class="pull-right">{{ trans('backLang.eventTotal') }} : ( {{ count($Events) }} )</small>
-
-            <small><a data-dismiss="modal" data-toggle="modal"
-                      data-target="#m-deleteAll" ui-toggle-class="bounce"
-                      ui-target="#animate">{{ trans('backLang.eventClear') }}</a></small>
+            
         </div>
 
 @endsection
