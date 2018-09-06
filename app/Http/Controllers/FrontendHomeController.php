@@ -1203,6 +1203,13 @@ class FrontendHomeController extends Controller
         $tpc_title_var = "title_" . trans('backLang.boxCode');
         $site_desc_var = "site_desc_" . trans('backLang.boxCode');
         $site_keywords_var = "site_keywords_" . trans('backLang.boxCode');
+       
+        $PageTitle = "Lịch công tác";
+    
+        $PageDescription = "Lịch công tác";
+    
+        $PageKeywords = "Lịch công tác";
+        
         
         // .. end of .. Page Title, Description, Keywords
 
@@ -1213,7 +1220,10 @@ class FrontendHomeController extends Controller
                 "FooterMenuLinks",
                 "FooterMenuLinks_name_vi",
                 "FooterMenuLinks_name_en",
-                "SideBanners"));
+                "SideBanners",
+                "PageTitle",
+                "PageDescription",
+                "PageKeywords"));
         
 
     }
