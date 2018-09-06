@@ -616,6 +616,7 @@
                     {
                   id: {!! $Event->id !!},
                   title: '{!! $Event->title .":".$Event->details!!}',
+                  details: '{!! $Event->details !!}',
                   url: '{{ route("lichcongtacEdit",["id"=>$Event->id]) }}',
                   start: '{{ date('Y-m-d', strtotime($Event->start_date)) }}',
                   end: '{{ date('Y-m-d', strtotime($Event->end_date)) }}',
@@ -625,6 +626,7 @@
                     {
                   id: {!! $Event->id !!},
                   title: '{!! $Event->title.":".$Event->details !!}',
+                  details: '{!! $Event->details !!}',
                   url: '{{ route("lichcongtacEdit",["id"=>$Event->id]) }}',
                   start: '{{ date('Y-m-d H:i:s', strtotime($Event->start_date)) }}',
                   end: '{{ date('Y-m-d H:i:s', strtotime($Event->end_date)) }}',
@@ -634,6 +636,7 @@
                     {
                   id: {!! $Event->id !!},
                   title: '{!! $Event->title.":".$Event->details !!}',
+                  details: '{!! $Event->details !!}',
                   url: '{{ route("lichcongtacEdit",["id"=>$Event->id]) }}',
                   start: '{{ date('Y-m-d H:i:s', strtotime($Event->start_date)) }}',
                   className: ['green']
@@ -642,6 +645,7 @@
                     {
                   id: {!! $Event->id !!},
                   title: '{!! $Event->title.":".$Event->details !!}',
+                  details: '{!! $Event->details !!}',
                   url: '{{ route("lichcongtacEdit",["id"=>$Event->id]) }}',
                   start: '{{ date('Y-m-d', strtotime($Event->start_date)) }}',
                   className: ['white']
