@@ -1219,11 +1219,8 @@ class FrontendHomeController extends Controller
         // .. end of .. Page Title, Description, Keywords
 
         //List of Events
-                if (@Auth::user()->permissionsGroup->view_status) {
-                    $Events = Event::where('created_by', '=', Auth::user()->id)->orderby('start_date', 'asc')->get();
-                } else {
-                    $Events = Event::orderby('start_date', 'asc')->get();
-                }
+                
+                $Events = Event::orderby('start_date', 'asc')->get();
                 $DefaultDate = date('Y-m-d');
                 $EStatus = "";
 
