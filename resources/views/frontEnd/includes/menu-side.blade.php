@@ -28,10 +28,10 @@
     <div class="block4">
 
             <div class="block-header" style="margin-bottom: 0">
-                <h4><img src="/images/background/lotus.ico" alt="" width="26px"> {!! trans('frontLang.partners') !!}</h4>
+                <h4><img src="/images/background/lotus.ico" alt="" width="26px"> Văn phòng điện tử</h4>
             </div>
 
-            @foreach ($SideBanners->where('status',1)->where('type_id',3) as $SideBanner)
+            @foreach ($SideBanners->where('status',1)->where('type_id',6) as $SideBanner)
                 <div class="box-banner">
                     <a href="{!! $SideBanner->link_url !!}" target="_blank">
                         <img src="/uploads/banners/{!! $SideBanner->$file_var !!}" alt="{!! $SideBanner->$title_var !!}" title="{!! $SideBanner->$title_var !!}" width="100%">
