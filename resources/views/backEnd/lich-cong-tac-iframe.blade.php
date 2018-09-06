@@ -616,7 +616,7 @@
                     {
                   id: {!! $Event->id !!},
                   title: '{!! $Event->title !!}',
-                  url: '{{ route("calendarEdit",["id"=>$Event->id]) }}',
+                  url: '{{ route("lichcongtacEdit",["id"=>$Event->id]) }}',
                   start: '{{ date('Y-m-d', strtotime($Event->start_date)) }}',
                   end: '{{ date('Y-m-d', strtotime($Event->end_date)) }}',
                   className: ['info']
@@ -625,7 +625,7 @@
                     {
                   id: {!! $Event->id !!},
                   title: '{!! $Event->title !!}',
-                  url: '{{ route("calendarEdit",["id"=>$Event->id]) }}',
+                  url: '{{ route("lichcongtacEdit",["id"=>$Event->id]) }}',
                   start: '{{ date('Y-m-d H:i:s', strtotime($Event->start_date)) }}',
                   end: '{{ date('Y-m-d H:i:s', strtotime($Event->end_date)) }}',
                   className: ['danger']
@@ -634,7 +634,7 @@
                     {
                   id: {!! $Event->id !!},
                   title: '{!! $Event->title !!}',
-                  url: '{{ route("calendarEdit",["id"=>$Event->id]) }}',
+                  url: '{{ route("lichcongtacEdit",["id"=>$Event->id]) }}',
                   start: '{{ date('Y-m-d H:i:s', strtotime($Event->start_date)) }}',
                   className: ['green']
                 },
@@ -642,7 +642,7 @@
                     {
                   id: {!! $Event->id !!},
                   title: '{!! $Event->title !!}',
-                  url: '{{ route("calendarEdit",["id"=>$Event->id]) }}',
+                  url: '{{ route("lichcongtacEdit",["id"=>$Event->id]) }}',
                   start: '{{ date('Y-m-d', strtotime($Event->start_date)) }}',
                   className: ['white']
                 },
