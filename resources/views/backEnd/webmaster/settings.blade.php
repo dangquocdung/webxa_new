@@ -322,7 +322,7 @@
                 </select>
             </div>
 
-            <div class="form-group">
+            {{--  <div class="form-group">
                 <label>{{ trans('backLang.contactPageId') }} : </label>
                 <select name="contact_page_id" id="contact_page_id" class="form-control c-select">
                     <option value="0">- - {!!  trans('backLang.none') !!} - -</option>
@@ -341,7 +341,7 @@
                         <option value="{{ $SitePage->id  }}" {{ ($SitePage->id == $WebmasterSetting->contact_page_id) ? "selected='selected'":""  }}>{{ $title }}</option>
                     @endforeach
                 </select>
-            </div>
+            </div>  --}}
 
             <div class="form-group">
                 <label>{{ trans('backLang.newsletterGroup') }} : </label>
