@@ -21,7 +21,7 @@
             
             <div class="col-md-12">
 
-                <iframe src="http://halinh.dungthinh.com/admin/calendar" frameborder="0"></iframe>
+                <iframe src="http://halinh.dungthinh.com/admin/calendar" frameborder="0" style="overflow:hidden;height:150%;width:150%" height="150%" width="150%"></iframe>
 
                     
             
