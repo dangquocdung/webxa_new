@@ -291,17 +291,7 @@
                 </select>
             </div>
 
-            <div class="form-group">
-                <label>{{ trans('backLang.newsletterGroup') }} : </label>
-                <select name="newsletter_contacts_group" id="newsletter_contacts_group" class="form-control c-select">
-                    <option value="0">- - {!!  trans('backLang.none') !!} - -</option>
-                    @foreach ($ContactsGroups as $ContactsGroup)
-                        <?php
-                        ?>
-                        <option value="{{ $ContactsGroup->id  }}" {{ ($ContactsGroup->id == $WebmasterSetting->newsletter_contacts_group) ? "selected='selected'":""  }}>{!! $ContactsGroup->name   !!}</option>
-                    @endforeach
-                </select>
-            </div>
+            
 
 
         </div>
@@ -371,6 +361,18 @@
                         }
                         ?>
                         <option value="{{ $SitePage->id  }}" {{ ($SitePage->id == $WebmasterSetting->contact_page_id) ? "selected='selected'":""  }}>{{ $title }}</option>
+                    @endforeach
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>{{ trans('backLang.newsletterGroup') }} : </label>
+                <select name="newsletter_contacts_group" id="newsletter_contacts_group" class="form-control c-select">
+                    <option value="0">- - {!!  trans('backLang.none') !!} - -</option>
+                    @foreach ($ContactsGroups as $ContactsGroup)
+                        <?php
+                        ?>
+                        <option value="{{ $ContactsGroup->id  }}" {{ ($ContactsGroup->id == $WebmasterSetting->newsletter_contacts_group) ? "selected='selected'":""  }}>{!! $ContactsGroup->name   !!}</option>
                     @endforeach
                 </select>
             </div>

@@ -287,7 +287,9 @@ For more details check <a href='http://smartfordesign.net/smartend/documentation
             'home_content3_section_id' => $WebmasterSetting->home_content3_section_id,
             'home_banners_section_id' => $WebmasterSetting->home_banners_section_id,
             'home_text_banners_section_id' => $WebmasterSetting->home_text_banners_section_id,
-            'side_banners_section_id' => $WebmasterSetting->side_banners_section_id
+            'side_banners_section_id' => $WebmasterSetting->side_banners_section_id,
+            'side_banners_section_id_2' => $WebmasterSetting->side_banners_section_id_2,
+            'side_banners_section_id_3' => $WebmasterSetting->side_banners_section_id_3
         ];
         // Response MSG
         $response = [
