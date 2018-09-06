@@ -615,7 +615,7 @@
             @if($Event->type ==3)
                     {
                   id: {!! $Event->id !!},
-                  title: '{!! $Event->title !!}',
+                  title: '{!! $Event->title .":".$Event->details!!}',
                   url: '{{ route("lichcongtacEdit",["id"=>$Event->id]) }}',
                   start: '{{ date('Y-m-d', strtotime($Event->start_date)) }}',
                   end: '{{ date('Y-m-d', strtotime($Event->end_date)) }}',
@@ -624,7 +624,7 @@
         @elseif($Event->type ==2)
                     {
                   id: {!! $Event->id !!},
-                  title: '{!! $Event->title !!}',
+                  title: '{!! $Event->title.":".$Event->details !!}',
                   url: '{{ route("lichcongtacEdit",["id"=>$Event->id]) }}',
                   start: '{{ date('Y-m-d H:i:s', strtotime($Event->start_date)) }}',
                   end: '{{ date('Y-m-d H:i:s', strtotime($Event->end_date)) }}',
@@ -633,7 +633,7 @@
         @elseif($Event->type ==1)
                     {
                   id: {!! $Event->id !!},
-                  title: '{!! $Event->title !!}',
+                  title: '{!! $Event->title.":".$Event->details !!}',
                   url: '{{ route("lichcongtacEdit",["id"=>$Event->id]) }}',
                   start: '{{ date('Y-m-d H:i:s', strtotime($Event->start_date)) }}',
                   className: ['green']
@@ -641,7 +641,7 @@
         @else
                     {
                   id: {!! $Event->id !!},
-                  title: '{!! $Event->title !!}',
+                  title: '{!! $Event->title.":".$Event->details !!}',
                   url: '{{ route("lichcongtacEdit",["id"=>$Event->id]) }}',
                   start: '{{ date('Y-m-d', strtotime($Event->start_date)) }}',
                   className: ['white']
