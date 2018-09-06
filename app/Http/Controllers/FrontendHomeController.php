@@ -26,6 +26,8 @@ use App\WebmasterSetting;
 use Illuminate\Http\Request;
 use Mail;
 
+use App\Event;
+
 class FrontendHomeController extends Controller
 {
     public function __construct()
