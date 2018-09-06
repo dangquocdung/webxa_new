@@ -1122,6 +1122,20 @@ class FrontendHomeController extends Controller
                 }
                 // .. end of .. Page Title, Description, Keywords
 
+                // ..Calendar
+                // General for all pages
+                $GeneralWebmasterSections = WebmasterSection::where('status', '=', '1')->orderby('row_no', 'asc')->get();
+                // General END
+
+                //List of Events
+                if (@Auth::user()->permissionsGroup->view_status) {
+                    $Events = Event::where('created_by', '=', Auth::user()->id)->orderby('start_date', 'asc')->get();
+                } else {
+                    $Events = Event::orderby('start_date', 'asc')->get();
+                }
+                $DefaultDate = date('Y-m-d');
+                $EStatus = "";
+
                 return view("frontEnd.contact",
                     compact("WebsiteSettings",
                         "WebmasterSettings",
@@ -1138,7 +1152,11 @@ class FrontendHomeController extends Controller
                         "PageTitle",
                         "PageDescription",
                         "PageKeywords",
-                        "TopicsMostViewed"));
+                        "TopicsMostViewed",
+                        "GeneralWebmasterSections", 
+                        "Events", 
+                        "DefaultDate", 
+                        "EStatus"));
 
             } else {
                 return redirect()->action('FrontendHomeController@HomePage');
