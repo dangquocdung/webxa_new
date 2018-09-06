@@ -36,11 +36,12 @@
         </div>
 
         @foreach ($SideBanners as $SideBanner)
-            
-                    <a href="{!! $SideBanner->link_url !!}" target="_blank">
-                        <img src="/uploads/banners/{!! $SideBanner->$file_var !!}" alt="{!! $SideBanner->$title_var !!}" title="{!! $SideBanner->$title_var !!}" width="100%">
-                    </a>
-                </div>
+            <div class="box-banner">
+        
+                <a href="{!! $SideBanner->link_url !!}" target="_blank">
+                    <img src="/uploads/banners/{!! $SideBanner->$file_var !!}" alt="{!! $SideBanner->$title_var !!}" title="{!! $SideBanner->$title_var !!}" width="100%">
+                </a>
+            </div>
            
         @endforeach
 
