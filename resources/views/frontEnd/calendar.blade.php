@@ -19,15 +19,10 @@
 
             
             
-            <div class="col-md-12" style="margin:0px;padding:0px;overflow:hidden">
+            <div class="col-md-12">
 
-                <iframe src="http://halinh.dungthinh.com/admin/calendar" frameborder="0" style="overflow:hidden;height:100%;width:100%" height="100%" width="100%"></iframe>
-
-                    
+                <iframe src="lich-cong-tac-iframe" frameborder="0" style="overflow:hidden;height:100%;width:100%" height="100%" width="100%"></iframe>
             
-            
-                    
-
             </div>
         </div>
     </section>
