@@ -368,6 +368,9 @@ Route::get('/{lang?}/contact', 'FrontendHomeController@ContactPageByLang')->name
 Route::get('/page/{id}', 'FrontendHomeController@PageView');
 Route::get('/{lang?}/page/{id}', 'FrontendHomeController@PageViewByLang');
 
+// ..Calendar
+Route::get('/lich-cong-tac', 'FrontendHomeController@CalendarPage')->name('calendarPage');
+
 // Route::post('/{lang?}/section/{id}', 'FrontendHomeController@StoreCommentsByLang')->name('StoreCommentsByLang');
 
 
