@@ -321,27 +321,7 @@
                     @endforeach
                 </select>
             </div>
-
-            {{--  <div class="form-group">
-                <label>{{ trans('backLang.contactPageId') }} : </label>
-                <select name="contact_page_id" id="contact_page_id" class="form-control c-select">
-                    <option value="0">- - {!!  trans('backLang.none') !!} - -</option>
-                    <?php
-                    $title_var = "title_" . trans('backLang.boxCode');
-                    $title_var2 = "title_" . trans('backLang.boxCodeOther');
-                    ?>
-                    @foreach ($SitePages as $SitePage)
-                        <?php
-                        if ($SitePage->$title_var != "") {
-                        $title = $SitePage->$title_var;
-                        } else {
-                        $title = $SitePage->$title_var2;
-                        }
-                        ?>
-                        <option value="{{ $SitePage->id  }}" {{ ($SitePage->id == $WebmasterSetting->contact_page_id) ? "selected='selected'":""  }}>{{ $title }}</option>
-                    @endforeach
-                </select>
-            </div>  --}}
+            
 
             <div class="form-group">
                 <label>{{ trans('backLang.newsletterGroup') }} : </label>
