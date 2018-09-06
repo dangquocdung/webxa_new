@@ -17,8 +17,7 @@
 <link rel="stylesheet" href="{{ URL::to('backEnd/assets/animate.css/animate.min.css') }}" type="text/css"/>
 <link rel="stylesheet" href="{{ URL::to('backEnd/assets/glyphicons/glyphicons.css') }}" type="text/css"/>
 <link rel="stylesheet" href="{{ URL::to('backEnd/assets/font-awesome/css/font-awesome.min.css') }}" type="text/css"/>
-<link rel="stylesheet" href="{{ URL::to('backEnd/assets/material-design-icons/material-design-icons.css') }}"
-      type="text/css"/>
+<link rel="stylesheet" href="{{ URL::to('backEnd/assets/material-design-icons/material-design-icons.css') }}" type="text/css"/>
 
 <link rel="stylesheet" href="{{ URL::to('backEnd/assets/bootstrap/dist/css/bootstrap.min.css') }}" type="text/css"/>
 <link rel="stylesheet" href="{{ URL::to('backEnd/assets/styles/app.min.css') }}">
