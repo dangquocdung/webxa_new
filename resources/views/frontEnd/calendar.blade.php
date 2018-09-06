@@ -7,7 +7,7 @@
     <section id="content">
         <div class="block3">
 
-            <div class="portlet-header" style="margin-bottom:0">
+            <div class="portlet-header" style="margin-bottom:0; height: 800px">
                 
                     <ul class="breadcrumb">
                         <li><a href="{{ route('Home') }}"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i>
