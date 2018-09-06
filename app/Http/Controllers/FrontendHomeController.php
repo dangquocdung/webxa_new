@@ -1180,6 +1180,87 @@ class FrontendHomeController extends Controller
         return view("backEnd.lich-cong-tac-iframe", compact("GeneralWebmasterSections", "Events", "DefaultDate", "EStatus"));
         
     }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function LichCongTac()
+    {
+        return $this->LichCongTacByLang("");
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function LichCongTacByLang($lang = "")
+    {
+
+        if ($lang != "") {
+            // Set Language
+            App::setLocale($lang);
+            \Session::put('locale', $lang);
+        }
+        // General Webmaster Settings
+        $WebmasterSettings = WebmasterSetting::find(1);
+
+        // General for all pages
+
+        $WebsiteSettings = Setting::find(1);
+        $HeaderMenuLinks = Menu::where('father_id', $WebmasterSettings->header_menu_id)->where('status',
+            1)->orderby('row_no', 'asc')->get();
+        $FooterMenuLinks = Menu::where('father_id', $WebmasterSettings->footer_menu_id)->where('status',
+            1)->orderby('row_no', 'asc')->get();
+        $FooterMenuLinks_father = Menu::find($WebmasterSettings->footer_menu_id);
+        $FooterMenuLinks_name_vi = "";
+        $FooterMenuLinks_name_en = "";
+        if (count($FooterMenuLinks_father) > 0) {
+            $FooterMenuLinks_name_vi = $FooterMenuLinks_father->title_vi;
+            $FooterMenuLinks_name_en = $FooterMenuLinks_father->title_en;
+        }
+        $SideBanners = Banner::where('section_id', $WebmasterSettings->side_banners_section_id)->where('status',
+            1)->orderby('row_no', 'asc')->get();
+        
+        // Page Title, Description, Keywords
+        $seo_title_var = "seo_title_" . trans('backLang.boxCode');
+        $seo_description_var = "seo_description_" . trans('backLang.boxCode');
+        $seo_keywords_var = "seo_keywords_" . trans('backLang.boxCode');
+        $tpc_title_var = "title_" . trans('backLang.boxCode');
+        $site_desc_var = "site_desc_" . trans('backLang.boxCode');
+        $site_keywords_var = "site_keywords_" . trans('backLang.boxCode');
+        $PageTitle = 'Lịch công tác';
+        $PageDescription = 'Lịch công tác';
+        $PageKeywords = 'Lịch công tác';
+        
+        // .. end of .. Page Title, Description, Keywords
+
+        // ..Calendar
+        // General for all pages
+        $GeneralWebmasterSections = WebmasterSection::where('status', '=', '1')->orderby('row_no', 'asc')->get();
+        // General END
+
+        return view("frontEnd.calendar",
+            compact("WebsiteSettings",
+                "WebmasterSettings",
+                "HeaderMenuLinks",
+                "FooterMenuLinks",
+                "FooterMenuLinks_name_vi",
+                "FooterMenuLinks_name_en",
+                "SideBanners",
+                "WebmasterSection",
+                "Categories",
+                "CurrentCategory",
+                "PageTitle",
+                "PageDescription",
+                "PageKeywords",
+                "TopicsMostViewed"));
+
+            
+
+    }
     
     
     
