@@ -36,13 +36,12 @@
         </div>
 
         @foreach ($SideBanners as $SideBanner)
-            @if ($SideBanner->type_id == 1)
-                <div class="box-banner">
+            
                     <a href="{!! $SideBanner->link_url !!}" target="_blank">
                         <img src="/uploads/banners/{!! $SideBanner->$file_var !!}" alt="{!! $SideBanner->$title_var !!}" title="{!! $SideBanner->$title_var !!}" width="100%">
                     </a>
                 </div>
-            @endif
+           
         @endforeach
 
     </div>
