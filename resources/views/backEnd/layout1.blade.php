@@ -10,11 +10,12 @@
 
     
                 @yield('content')
-  
+            
+
 </div>
 
 
-
+@include('backEnd.includes.foot')
 @yield('footerInclude')
 
 </body>
