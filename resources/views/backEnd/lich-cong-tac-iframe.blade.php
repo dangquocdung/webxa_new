@@ -586,16 +586,11 @@
         <div class="padding">
             <div class="row m-b">
                 <div class="col-sm-4 m-b-sm">
-                    <button type="button" class="btn btn-sm primary" id="btnNew" data-toggle="modal"
-                            data-target="#mmn-new"
-                            ui-toggle-class="bounce"
-                            ui-target="#animate"><i class="material-icons">
-                            &#xe02e;</i> {{ trans('backLang.newEvent') }}</button>
-                    <button type="button" id="btnEdit" data-toggle="modal" class="displayNone"
-                            data-target="#mmn-edit"
-                            ui-toggle-class="bounce"
-                            ui-target="#animate">{{ trans('backLang.edit') }}</button>
+                   
 
+
+
+                    
                 </div>
                 <div class="col-sm-8 text-sm-right">
                     <div class="btn-group m-l-xs">

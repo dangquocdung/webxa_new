@@ -1176,7 +1176,7 @@ class FrontendHomeController extends Controller
         $DefaultDate = date('Y-m-d');
         $EStatus = "";
 
-        return view("backEnd.lich-cong-tac", compact("GeneralWebmasterSections", "Events", "DefaultDate", "EStatus"));
+        return view("backEnd.lich-cong-tac-iframe", compact("GeneralWebmasterSections", "Events", "DefaultDate", "EStatus"));
         
     }
     
