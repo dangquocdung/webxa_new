@@ -27,6 +27,7 @@ use Illuminate\Http\Request;
 use Mail;
 
 use App\Event;
+use Auth;
 
 class FrontendHomeController extends Controller
 {
