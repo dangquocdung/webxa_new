@@ -194,7 +194,7 @@
     </div>
 </div>
 
-@if ($SideBanners->->where('type_id','3')->count() > 0)
+@if ($SideBanners->where('type_id','3')->count() > 0)
     
     
 
