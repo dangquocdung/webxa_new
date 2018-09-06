@@ -617,7 +617,6 @@
                   id: {!! $Event->id !!},
                   title: '{!! $Event->title .":".$Event->details!!}',
                   details: '{!! $Event->details !!}',
-                  url: '{{ route("lichcongtacEdit",["id"=>$Event->id]) }}',
                   start: '{{ date('Y-m-d', strtotime($Event->start_date)) }}',
                   end: '{{ date('Y-m-d', strtotime($Event->end_date)) }}',
                   className: ['info']
@@ -627,7 +626,6 @@
                   id: {!! $Event->id !!},
                   title: '{!! $Event->title.":".$Event->details !!}',
                   details: '{!! $Event->details !!}',
-                  url: '{{ route("lichcongtacEdit",["id"=>$Event->id]) }}',
                   start: '{{ date('Y-m-d H:i:s', strtotime($Event->start_date)) }}',
                   end: '{{ date('Y-m-d H:i:s', strtotime($Event->end_date)) }}',
                   className: ['danger']
@@ -637,7 +635,6 @@
                   id: {!! $Event->id !!},
                   title: '{!! $Event->title.":".$Event->details !!}',
                   details: '{!! $Event->details !!}',
-                  url: '{{ route("lichcongtacEdit",["id"=>$Event->id]) }}',
                   start: '{{ date('Y-m-d H:i:s', strtotime($Event->start_date)) }}',
                   className: ['green']
                 },
@@ -646,47 +643,14 @@
                   id: {!! $Event->id !!},
                   title: '{!! $Event->title.":".$Event->details !!}',
                   details: '{!! $Event->details !!}',
-                  url: '{{ route("lichcongtacEdit",["id"=>$Event->id]) }}',
                   start: '{{ date('Y-m-d', strtotime($Event->start_date)) }}',
                   className: ['white']
                 },
         @endif
 
             @endforeach
-                    ],
-
-            eventResize: function(event, delta, revertFunc) {
-                if (!confirm('is this okay?')) {
-                revertFunc();
-                }else{
-                    $(document).ready(function(){
-                        $.ajax({
-                        url: '{{ URL::to(env('BACKEND_PATH')."/calendar/") }}/' + event.id + '/extend',
-                        type: 'post',
-                        data: {'started_on': event.start.format(),'ended_on':event.end.format(),'_token':'{{ csrf_token() }}'},
-                        success: function(data){
-
-                            }
-                        });
-                    });
-                }
-            },
-            eventDrop: function( event, delta, revertFunc, jsEvent, ui, view ) {
-                if (!confirm('is this okay?')) {
-                revertFunc();
-                }else{
-                     $(document).ready(function(){
-                        $.ajax({
-                        url: '{{ URL::to(env('BACKEND_PATH')."/calendar/") }}/' + event.id + '/extend',
-                        type: 'post',
-                        data: {'started_on': event.start.format(),'_token':'{{ csrf_token() }}'},
-                        success: function(data){
-
-                            }
-                        });
-                    });
-                }
-            }
+                    ]
+            
 
         }">
             </div>

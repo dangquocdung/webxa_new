@@ -1180,32 +1180,7 @@ class FrontendHomeController extends Controller
         return view("backEnd.lich-cong-tac-iframe", compact("GeneralWebmasterSections", "Events", "DefaultDate", "EStatus"));
         
     }
-
-    public function LichCongTacEdit($id)
-    {
-        //
-        // General for all pages
-        $GeneralWebmasterSections = WebmasterSection::where('status', '=', '1')->orderby('row_no', 'asc')->get();
-        // General END
-
-        //List of Events
-        if (@Auth::user()->permissionsGroup->view_status) {
-            $Events = Event::where('created_by', '=', Auth::user()->id)->orderby('start_date', 'asc')->get();
-            $EditEvent = Event::where('created_by', '=', Auth::user()->id)->find($id);
-        } else {
-            $Events = Event::orderby('start_date', 'asc')->get();
-            $EditEvent = Event::find($id);
-        }
-
-        if (count($EditEvent) > 0) {
-            $DefaultDate = date('Y-m-d', strtotime($EditEvent->start_date));
-            $EStatus = "edit";
-            return view("backEnd.lich-cong-tac-iframe",
-                compact("GeneralWebmasterSections", "Events", "EditEvent", "DefaultDate", "EStatus"));
-        } else {
-            return redirect()->action('EventsController@index');
-        }
-    }
+    
     
     
 
