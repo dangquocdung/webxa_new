@@ -25,7 +25,7 @@
 
 @if (!empty($SideBanners))
     
-    @if ($SideBanners->where('type_id',1)->count() > 0)
+    
 
     <div class="block4">
 
@@ -44,7 +44,7 @@
         @endforeach
 
     </div>
-    @endif
+   
 
     @if ($SideBanners->where('type_id',2)->count() > 0)
 
