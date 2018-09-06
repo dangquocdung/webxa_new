@@ -20,13 +20,6 @@
 
     {{Form::close()}}
 </div>
-@yield('section-menu')
-
-
-    
-
-
-
 
 
 
@@ -152,48 +145,6 @@
 
 </div>
 
-
-
-<div class="block4">
-
-    <div class="block-header" style="margin-bottom: 0">
-
-        <h4><img src="/images/background/lotus.ico" alt="" width="26px"> Thống kê</h4>
-
-    </div>
-    <div class="clearfix"></div>
-
-    <div class="box-banner" style="text-align:center">
-
-        <div style="padding: 5px 15px">
-
-            <table style="text-align:left; font-size:0.9em; margin-bottom: 5px;">
-                <tr>
-                    <td>Số lượt truy cập hôm nay: &emsp;</td>
-                    <th>{{ number_format($TodayVisitors) }}</th>
-                </tr>
-                <tr>
-                    <td>Số lượt xem trang hôm nay: &emsp;</td>
-                    <th>{{ number_format($TodayPages) }}</th>
-                </tr>
-            </table>
-
-            <table style="text-align:left; font-size:0.9em">
-                    
-                    <tr>
-                        <td>Tổng lượt truy cập: &emsp;</td>
-                        <th>{{ number_format($Visitors) }}</th>
-                    </tr>
-                    <tr>
-                        <td>Tổng lượt xem trang: &emsp;</td>
-                        <th>{{ number_format($Pages) }}</th>
-                    </tr>
-                </table>
-
-        </div>
-    </div>
-</div>
-
 @if (!empty($RightMenuLinks))
 <div class="right_1">
         
@@ -237,6 +188,50 @@
 
 </div>
 @endif
+
+
+
+<div class="block4">
+
+    <div class="block-header" style="margin-bottom: 0">
+
+        <h4><img src="/images/background/lotus.ico" alt="" width="26px"> Thống kê</h4>
+
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="box-banner" style="text-align:center">
+
+        <div style="padding: 5px 15px">
+
+            <table style="text-align:left; font-size:0.9em; margin-bottom: 5px;">
+                <tr>
+                    <td>Số lượt truy cập hôm nay: &emsp;</td>
+                    <th>{{ number_format($TodayVisitors) }}</th>
+                </tr>
+                <tr>
+                    <td>Số lượt xem trang hôm nay: &emsp;</td>
+                    <th>{{ number_format($TodayPages) }}</th>
+                </tr>
+            </table>
+
+            <table style="text-align:left; font-size:0.9em">
+                    
+                    <tr>
+                        <td>Tổng lượt truy cập: &emsp;</td>
+                        <th>{{ number_format($Visitors) }}</th>
+                    </tr>
+                    <tr>
+                        <td>Tổng lượt xem trang: &emsp;</td>
+                        <th>{{ number_format($Pages) }}</th>
+                    </tr>
+                </table>
+
+        </div>
+    </div>
+</div>
+
+
 
 
 
