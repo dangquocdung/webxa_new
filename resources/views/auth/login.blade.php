@@ -61,9 +61,6 @@
             {{--  <div class="m-b">
                 <a href="{{ url('/password/reset') }}" class="text-primary _600">{{ trans('backLang.forgotPassword') }}</a>
             </div>  --}}
-            <div class="m-b">
-                *Bạn cần đăng nhập để Liên hệ công tác & Gởi góp ý đến BBT!
-            </div>
         </div>
     </div>
 
