@@ -470,7 +470,7 @@
                                                         </div>
 
                                                         <div class="tin_title_abstract" style="display:;">
-                                                            <p>{{ str_limit(strip_tags($tin->$details_var), $limit = 350, $end = '...') }}</p>
+                                                            <p>{{ $tin->$summary_var }}</p>
                                                         </div>
                                                     </div>
 
