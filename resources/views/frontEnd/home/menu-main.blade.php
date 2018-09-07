@@ -470,7 +470,7 @@
                                                         </div>
 
                                                         <div class="tin_title_abstract" style="display:;">
-                                                            <p>{{ $tin->$summary_var }}</p>
+                                                            {{ $tin->summary_vi }}
                                                         </div>
                                                     </div>
 
