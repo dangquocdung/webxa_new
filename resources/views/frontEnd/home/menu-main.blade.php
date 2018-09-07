@@ -457,7 +457,6 @@
                                                         <a class="tin_title_text" href="{{ $topic_link_url }}">
                                                             <div class="tin_title_text">
                                                                 {{ $tin->$link_title_var }}
-                                                                {{--  <small><em style="font-weight: normal">({{ \Carbon\Carbon::parse($tin->created_at)->format('d-m-Y H:i:s') }})</em></small>  --}}
                                                             </div>
                                                             @if (strlen($tin->photo_file) > 4)
                                                                 <img style="display: inline-block; width: 160px; height:auto;" src="/uploads/topics/{{ $tin->photo_file }}" alt="" title="">
@@ -465,12 +464,8 @@
 
                                                         </a>
 
-                                                        <div class="thumb">
-
-                                                        </div>
-
                                                         <div class="tin_title_abstract" style="display:;">
-                                                            {{ $tin->summary_vi }}
+                                                            {{ $tin->$link_title_var }}
                                                         </div>
                                                     </div>
 
