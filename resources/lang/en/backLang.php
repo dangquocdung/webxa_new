@@ -490,4 +490,6 @@ return array (
   'activityHistory' => 'Activities History',
   'usersBackup' => 'Backup & Restore',
   'curlBHT' => 'Curl Data',
+  'bando' => 'Map',
+  'sumTopic' => 'Summary',
 );
