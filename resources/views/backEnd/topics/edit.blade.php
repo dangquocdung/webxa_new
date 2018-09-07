@@ -320,7 +320,7 @@
                                 </label>
                                 <div class="col-sm-10">
                                     <div class="box p-a-xs">
-                                        {!! Form::textarea('ummary_vi',$Topics->summary_vi, array('placeholder' => '','class' => 'form-control summernote', 'dir'=>trans('backLang.rtl'),'rows'=>'3')) !!}
+                                        {!! Form::textarea('summary_vi',$Topics->summary_vi, array('placeholder' => '','class' => 'form-control summernote', 'dir'=>trans('backLang.rtl'),'rows'=>'3')) !!}
                                     </div>
                                 </div>
                             </div>
@@ -336,6 +336,17 @@
                                     {!! Form::text('title_en',$Topics->title_en, array('placeholder' => '','class' => 'form-control','id'=>'title_en','required'=>'', 'dir'=>trans('backLang.ltr'))) !!}
                                 </div>
                             </div>
+                            <div class="form-group row">
+                                    <label for="summary_en"
+                                            class="col-sm-2 form-control-label">{!!  trans('backLang.sumTopic') !!}
+                                        @if(Helper::GeneralWebmasterSettings("vi_box_status") && Helper::GeneralWebmasterSettings("en_box_status")){!!  trans('backLang.arabicBox') !!}@endif
+                                    </label>
+                                    <div class="col-sm-10">
+                                        <div class="box p-a-xs">
+                                            {!! Form::textarea('summary_en',$Topics->summary_en, array('placeholder' => '','class' => 'form-control summernote', 'dir'=>trans('backLang.rtl'),'rows'=>'3')) !!}
+                                        </div>
+                                    </div>
+                                </div>
                         @endif
 
                         @if($WebmasterSection->attach_file_status)
