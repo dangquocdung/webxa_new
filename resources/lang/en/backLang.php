@@ -491,4 +491,5 @@ return array (
   'usersBackup' => 'Backup & Restore',
   'curlBHT' => 'Curl Data',
   'bando' => 'Map',
+  'sumTopic' => 'Summary',
 );
