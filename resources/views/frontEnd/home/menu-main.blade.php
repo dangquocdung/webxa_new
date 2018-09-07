@@ -465,7 +465,7 @@
                                                         </a>
 
                                                         <div class="tin_title_abstract" style="display:;">
-                                                            {{ $tin->$link_title_var }}
+                                                            {{ $tin->summary_vi }}
                                                         </div>
                                                     </div>
 
