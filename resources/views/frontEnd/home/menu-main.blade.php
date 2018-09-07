@@ -366,7 +366,7 @@
                         ?>
 
                         <div class="block3">
-                            <div class="box box-default">
+                            <div class="box box-default" style="box-shadow:none">
                                 <div class="box-header with-border">
                                     <img src="/images/background/lotus.ico" width="30px" style="padding: 3px">
                                     <a href="{{ $Category_link_url }}">
