@@ -9,7 +9,8 @@
                 <div class="portlet-header">
                     
                     <ul class="breadcrumb">
-                        <li><a href="{{ route("Home") }}"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i>
+                        <li>
+                            <a href="{{ route("Home") }}"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i>
                         </li>
                         @if($WebmasterSection!="none")
                             <li class="active">{!! trans('backLang.'.$WebmasterSection->name) !!}</li>
@@ -37,22 +38,7 @@
         <div class="clearfix"></div>
 
         <div class="loai-tin">
-
-                @if($WebmasterSection!="none")
-
-                    @if(in_array($WebmasterSection->id,[23,24]) && (Auth::guest()))
-                        <div class="col-md-12">
-                            <div class="alert alert-warning">
-                                <i class="fa fa-info"></i> 
-                                &nbsp; Bạn cần <a href="/login" style="text-decoration:none; color:purple ">đăng nhập</a> để gửi câu hỏi!
-                            </div>
-                        </div>
-                    @endif
-                @endif
-
-          
-
-        
+            
             @if($Topics->total() == 0)
                 <div class="col-md-12">
                     <div class="alert alert-warning">

@@ -324,7 +324,7 @@
                    
                     </div>
                     
-                @else 
+                @elseif ($MainMenuLink->webmasterSection->name == 'news') 
                     <div class="box-body">
                         <div class="card">
                             @if(count($MainMenuLink->webmasterSection->sections) >0)
