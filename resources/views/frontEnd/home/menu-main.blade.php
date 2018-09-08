@@ -147,8 +147,6 @@
             }
         ?>
 
-        
-
                 {{-- {!! json_encode($MainMenuLink->webmasterSection) !!} --}}
 
             @if ($MainMenuLink->webmasterSection->name == 'photos')
@@ -347,8 +345,6 @@
 
                     @foreach($MainMenuLink->webmasterSection->sections as $MnuCategory)
                         
-                    
-                            
                         <?php
                             if ($MnuCategory->$slug_var != "" && Helper::GeneralWebmasterSettings("links_status")) {
                                 if (trans('backLang.code') != env('DEFAULT_LANGUAGE')) {
@@ -379,7 +375,6 @@
                                     </div>
                                 </div>
 
-
                                 @php
                                                     
                                     $topicIds = $MnuCategory->selectedCategories->sortbyDesc('topic_date')->take(50);
@@ -407,13 +402,8 @@
 
                                 @endphp
 
-
-
                                 <div class="col-md-12" style="padding-top: 10px">
 
-                               
-                                
-                            
                                     @foreach($tins as $topicId)
                                                         
                                         <?php
@@ -469,15 +459,12 @@
                                                         </div>
                                                     </div>
 
-                                                
                                             </div>
                                             
-
                                         @elseif ($tin->status == 1)
 
                                             <div class="col-md-5 col-sm-5 col-xs-12" style="float: right;"> 
                                                 
-
                                                     <div class="news-five row">
                                                         <ul class="news-block">
                                                             
@@ -499,20 +486,14 @@
                                    
                                 </div>
                                     
-                                
                             </div>
                         </div>
 
-                        
                     @endforeach
 
                 @endif
             
-            
             @endif
-
-            
-           
 
     @endforeach
 

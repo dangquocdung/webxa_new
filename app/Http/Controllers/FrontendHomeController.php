@@ -489,8 +489,15 @@ class FrontendHomeController extends Controller
             } else {
                 
                 // Topics if NO Cat_ID
-                $Topics = Topic::where([['webmaster_id', '=', $WebmasterSection->id], ['status',
-                    1], ['expire_date', '>=', date("Y-m-d")], ['expire_date', '<>', null]])->orWhere([['webmaster_id', '=', $WebmasterSection->id], ['status', 1], ['expire_date', null]])->orderby('date', 'desc')->paginate(env('FRONTEND_PAGINATION'));
+                $Topics = Topic::where([['webmaster_id', '=', $WebmasterSection->id], 
+                                        ['status',1], 
+                                        ['expire_date', '>=', date("Y-m-d")], 
+                                        ['expire_date', '<>', null]])
+                                        ->orWhere([['webmaster_id', '=', $WebmasterSection->id], 
+                                                    ['status', 1], 
+                                                    ['expire_date', null]])
+                                                    ->orderby('date', 'desc')
+                                                    ->paginate(env('FRONTEND_PAGINATION'));
                 
                 $Topics_expire = Topic::where([['webmaster_id', '=', $WebmasterSection->id], 
                                                 ['status',1], 
@@ -500,8 +507,16 @@ class FrontendHomeController extends Controller
                                                 ->paginate(env('FRONTEND_PAGINATION'));
                 
                     // Get Most Viewed
-                $TopicsMostViewed = Topic::where([['webmaster_id', '=', $WebmasterSection->id], ['status',
-                    1], ['expire_date', '>=', date("Y-m-d")], ['expire_date', '<>', null]])->orWhere([['webmaster_id', '=', $WebmasterSection->id], ['status', 1], ['expire_date', null]])->orderby('visits', 'desc')->limit(3)->get();
+                $TopicsMostViewed = Topic::where([['webmaster_id', '=', $WebmasterSection->id], 
+                                                ['status',1], 
+                                                ['expire_date', '>=', date("Y-m-d")], 
+                                                ['expire_date', '<>', null]])
+                                                ->orWhere([['webmaster_id', '=', $WebmasterSection->id], 
+                                                            ['status', 1], 
+                                                            ['expire_date', null]])
+                                                            ->orderby('visits', 'desc')
+                                                            ->limit(3)
+                                                            ->get();
             }
             
             // General for all pages
