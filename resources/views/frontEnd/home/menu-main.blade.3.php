@@ -732,6 +732,7 @@
                         <!-- /.row -->
                     </div>
                 
+                @else
                 @endif
             </div>
         </div>

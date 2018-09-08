@@ -339,7 +339,7 @@
                     </div>
                 </div>
                 
-            @else    
+            @elseif ($MainMenuLink->webmasterSection->name == 'news')    
 
                 @if(count($MainMenuLink->webmasterSection->sections) >0)
 
