@@ -83,6 +83,19 @@
 
 </div>
 
+<div class="block4">
+
+{{--  <iframe src="//iframe.dacast.com/b/117358/c/482245" width="300" height="200" frameborder="0" scrolling="no" allow="autoplay" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>  --}}
+
+
+
+
+    <video width="352" height="198" controls>
+        <source src="http://hatinhtv.vn:8134/hls-live/livepkgr/_definst_/liveevent/livestream1.m3u8" type="application/x-mpegURL">
+    </video>
+    
+</div>
+
 <div class="block4" style="border-radius: 5px">
 
     <div id="block-header-bd" class="block-header" style="margin-bottom: 0" data-toggle="collapse" href="#thoi-tiet-ha-tinh">
