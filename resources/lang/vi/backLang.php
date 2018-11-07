@@ -514,4 +514,5 @@ return array (
   'nga3dongloc' => 'Ngã ba Đồng Lộc',
   'bando' => 'Bản đồ',
   'sumTopic' => 'Tóm tắt',
+  'chuyenmuc' => 'Chuyên mục',
 );
